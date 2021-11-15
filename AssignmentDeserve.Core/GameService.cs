@@ -4,7 +4,7 @@ using System;
 namespace AssignmentDeserve.Core{
     public class GameService:IGameService{
 
-        private readonly DiceFactory _diceFactory;
+        private readonly IDiceFactory _diceFactory;
 
         private static IRollable RollingEquipment;
 
@@ -19,7 +19,7 @@ namespace AssignmentDeserve.Core{
 
         private static int BoardSize{get;set;}
 
-        public GameService(DiceFactory diceFactory){
+        public GameService(IDiceFactory diceFactory){
             _diceFactory=diceFactory;
         }
 

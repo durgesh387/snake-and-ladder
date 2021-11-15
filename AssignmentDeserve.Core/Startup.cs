@@ -7,7 +7,7 @@ namespace AssignmentDeserve.Core{
             var services = new ServiceCollection();
 
             services.AddSingleton<EntryPoint>();
-            services.AddSingleton<DiceFactory>();
+            services.AddSingleton<IDiceFactory,DiceFactory>();
             services.AddSingleton<IGameService,GameService>();
             services.AddTransient<IRollable,SingleDice>();
             services.AddTransient<IRollable,EvenCrookedDice>();

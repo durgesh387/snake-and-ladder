@@ -5,13 +5,11 @@ namespace AssignmentDeserve.Core{
 
         public int GetEndPoint()
         {
-            //throw new System.NotImplementedException();
             return EndPoint;
         }
 
         public int GetStartPoint()
         {
-            //throw new System.NotImplementedException();
             return StartPoint;
         }
 
