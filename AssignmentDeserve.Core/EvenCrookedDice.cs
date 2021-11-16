@@ -1,3 +1,5 @@
+using System;
+
 namespace AssignmentDeserve.Core{
     public class EvenCrookedDice : IRollable
     {
@@ -15,7 +17,19 @@ namespace AssignmentDeserve.Core{
 
         public int Roll()
         {
-            throw new System.NotImplementedException();
+            var rand=new Random();
+            var tmp=rand.Next(1,7);
+            if(tmp%2==0){
+                return tmp;
+            }
+            else{
+                if(tmp+1 <7){
+                    return tmp+1;
+                }
+                else{
+                    return tmp-1;
+                }
+            }
         }
     }
 }
